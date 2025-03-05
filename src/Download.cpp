@@ -28,12 +28,12 @@ void Download::downloadAudioMacOs() {
     std::cout << "\033[0m";
     std::getline(std::cin, outputPath);
 
-    outputPath.erase(std::remove(outputPath.begin(), outputPath.end(), '\''), outputPath.end());
+    std::erase(outputPath, '\'');
 
-    std::string command = '"' + folderPath.string() + "/yt-dlp_macos" + '"' +
-                          " -f bestaudio -x --audio-format wav --ffmpeg-location " + '"' + folderPath.string() + '"' +
-                          " --no-playlist --quiet --ignore-errors --no-warnings --output "
-                          + "'" + outputPath + "/%(title)s.%(ext)s'" + " \"" + link + "\"";
+    const std::string command = '"' + folderPath.string() + "/yt-dlp_macos" + '"' +
+                                " -f bestaudio -x --audio-format wav --ffmpeg-location " + '"' + folderPath.string() + '"' +
+                                " --no-playlist --quiet --ignore-errors --no-warnings --output "
+                                + "'" + outputPath + "/%(title)s.%(ext)s'" + " \"" + link + "\"";
     std::cout << command;
 
     // Usunięcie wyjścia z YT-DLP.
@@ -99,7 +99,7 @@ void Download::downloadVideoMacOs() {
     std::cout << "\033[0m";
     std::getline(std::cin, outputPath);
 
-    outputPath.erase(std::remove(outputPath.begin(), outputPath.end(), '\''), outputPath.end());
+    std::erase(outputPath, '\'');
 
     std::string command = '"' + folderPath.string() + "/yt-dlp_macos" + '"';
 
@@ -107,7 +107,7 @@ void Download::downloadVideoMacOs() {
         command += " --download-sections \"*" + timestamps + "\"";
     }
 
-    command += (std::string) " --ffmpeg-location " + '"' + folderPath.string() + '"' +
+    command += static_cast<std::string>(" --ffmpeg-location ") + '"' + folderPath.string() + '"' +
             " -S vcodec:h264,fps,res,acodec:m4a --no-warnings --no-playlist --output " +
             "'" + outputPath + "/%(title)s.%(ext)s'" + " \"" + link + "\"";
 
@@ -126,7 +126,7 @@ void Download::downloadVideoMacOs() {
     std::cout << "\n";
     std::cout << "\033[92m";
     std::cout
-            << "Pobrano plik, poczekaj chwilę (około 15 sekund) - plik musi zostać przekonwertowany na mp4, na ten moment może pokazywać się rozszerzenie .part :)";
+            << "Pobrano plik, poczekaj chwilę (okolo 15 sekund) - plik musi zostać przekonwertowany na mp4, na ten moment moze pokazywac sie rozszerzenie .part :)";
     std::cout << "\033[0m";
     sleep(1);
     std::system("clear");
@@ -199,13 +199,13 @@ void Download::downloadVideoWindows() {
                           " -S ext:mp4:m4a --no-playlist --output "
                           + "\"" + outputPath + "\\%(title)s.%(ext)s\" " + "\"" + link + "\" > NUL\"";
 
-    cout << "\n";
+    std::cout << "\n";
     std::cout << "Pobieram plik...\n";
     std::cout << "Przy dluzszych filmikach moze potrwac to chwilke dluzej!\n";
 
     std::system(command.c_str());
 
-    cout << "\n";
+    std::cout << "\n";
     OutputColors::setTextColor(10);
     std::cout << "Pobrano plik!\nOkno zamknie sie automatycznie za 3 sekundy :)";
     OutputColors::setTextColor(7);

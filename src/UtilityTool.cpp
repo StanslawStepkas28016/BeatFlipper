@@ -7,6 +7,8 @@
 #include <filesystem>
 #include "../include/UtilityTool.h"
 #include "../include/GlobalVariables.h"
+#include "../include/OutputColors.h"
+
 
 void UtilityTool::resolveHomepath() {
 #ifdef _WIN32
