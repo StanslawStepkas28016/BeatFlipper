@@ -43,6 +43,7 @@ int main() {
         std::cout << "Wybierz co chcesz pobierać:\n";
         std::cout << "1. Audio.\n";
         std::cout << "2. Video.\n";
+        std::cout << "3. Zakończ.\n";
 
         std::cout << "\033[90m";
         std::cout << "> ";
@@ -52,9 +53,9 @@ int main() {
 
         if (userInput == "1") {
             Download::downloadAudioMacOs();
-            break;
         } else if (userInput == "2") {
             Download::downloadVideoMacOs();
+        } else if (userInput == "3") {
             break;
         } else {
             std::system("clear");
