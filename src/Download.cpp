@@ -30,14 +30,13 @@ void Download::downloadAudioMacOs() {
 
     std::erase(outputPath, '\'');
 
-    const std::string command = '"' + folderPath.string() + "/yt-dlp_macos" + '"' +
-                                " -f bestaudio -x --audio-format wav --ffmpeg-location " + '"' + folderPath.string() + '"' +
-                                " --no-playlist --quiet --ignore-errors --no-warnings --output "
-                                + "'" + outputPath + "/%(title)s.%(ext)s'" + " \"" + link + "\"";
-    std::cout << command;
+    std::string command = '"' + folderPath.string() + "/yt-dlp_macos" + '"' +
+                          " -f bestaudio -x --audio-format wav --ffmpeg-location " + '"' + folderPath.string() + '"' +
+                          " --no-playlist --quiet --ignore-errors --no-warnings --output "
+                          + "'" + outputPath + "/%(title)s.%(ext)s'" + " \"" + link + "\"";
 
     // Usunięcie wyjścia z YT-DLP.
-    //    command += " > /dev/null 2>&/**/1";
+    command += " > /dev/null 2>&1";
 
     std::cout << "\n";
     std::cout << "Pobieram plik...\n";
@@ -125,10 +124,12 @@ void Download::downloadVideoMacOs() {
 
     std::cout << "\n";
     std::cout << "\033[92m";
-    std::cout
-            << "Pobrano plik, poczekaj chwilę (okolo 15 sekund) - plik musi zostać przekonwertowany na mp4, na ten moment moze pokazywac sie rozszerzenie .part :)";
+    std::cout <<
+            "Pobrano plik, poczekaj chwilę (około 15 sekund) - plik musi zostać przekonwertowany na mp4, na ten moment moze pokazywac sie rozszerzenie .part :)\n";
     std::cout << "\033[0m";
+
     sleep(1);
+
     std::system("clear");
 }
 
