@@ -8,3 +8,4 @@ cmake_install.cmake
 CMakeLists.txt.user
 .idea
 cmake-build*
+.DS_Store
