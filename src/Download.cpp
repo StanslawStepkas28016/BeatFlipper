@@ -47,7 +47,9 @@ void Download::downloadAudioMacOs() {
     std::cout << "\033[92m";
     std::cout << "Pobrano plik!\n";
     std::cout << "\033[0m";
+
     sleep(1);
+
     std::system("clear");
 }
 
