@@ -1,7 +1,7 @@
 #ifndef BEATFLIPPER_DOWNLOAD_H
 #define BEATFLIPPER_DOWNLOAD_H
 
-class Download {
+class Downloader {
 public:
     static void downloadAudioMacOs();
 

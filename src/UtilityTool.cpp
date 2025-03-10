@@ -10,7 +10,7 @@
 #include "../include/OutputColors.h"
 
 
-void UtilityTool::resolveHomepath() {
+void UtilityTool::resolveHomePath() {
 #ifdef _WIN32
     const char *homePath = std::getenv("USERPROFILE");
     if (homePath == nullptr) {
@@ -23,7 +23,7 @@ void UtilityTool::resolveHomepath() {
     const char *homePath = std::getenv("HOME");
     if (homePath == nullptr) {
         std::cout << "\033[31m";
-        std::cout << "Wystąpił błąd, przy wyszukiwaniu ścieżki Homepath, napisz do mnie @prod.mustang!\n";
+        std::cout << "Wystąpił błąd, przy wyszukiwaniu ścieżki HomePath, napisz do mnie @prod.mustang!\n";
         std::cout << "\033[0m";
     }
     folderPath = std::filesystem::path(homePath) / "Biblioteki";

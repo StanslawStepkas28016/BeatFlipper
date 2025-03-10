@@ -2,18 +2,17 @@
 #include <iostream>
 #include <unistd.h>
 #include <regex>
-#include "../include/Download.h"
-#include "../include/OutputColors.h"
+#include "../include/Downloader.h"
 #include "../include/GlobalVariables.h"
 
 /* Metoda pobiera wyznaczony przez użytkownika Bit, metoda jak sama nazwa wskazuje
  * zdefiniowana stricte pod użytkowników MacOs (sprawdzane na MacOs Ventura i Monterey). */
-void Download::downloadAudioMacOs() {
+void Downloader::downloadAudioMacOs() {
     std::string link;
     std::string outputPath;
 
     std::system("clear");
-    std::cout << "Wprowadź link do Beat'u:\n";
+    std::cout << "Wprowadź link do bita:\n";
 
     std::cout << "\033[90m";
     std::cout << "> ";
@@ -55,13 +54,13 @@ void Download::downloadAudioMacOs() {
 
 /* Metoda pobiera wyznaczony przez użytkownika Filmik, natywnie wybiera format mp4,
  * z Audio w codecu m4a/wav, w zależności od dostępnego formatu, metoda stricte pod MacOs/Unix. */
-void Download::downloadVideoMacOs() {
+void Downloader::downloadVideoMacOs() {
     std::string link;
     std::string outputPath;
     std::string timestamps;
 
     std::system("clear");
-    std::cout << "Wprowadź link do Filmiku:\n";
+    std::cout << "Wprowadź link do filmiku:\n";
 
     std::cout << "\033[90m";
     std::cout << "> ";
@@ -137,7 +136,7 @@ void Download::downloadVideoMacOs() {
 
 /* Metoda pobiera wyznaczony przez użytkownika Bit, metoda jak sama nazwa wskazuje
  * zdefiniowana stricte pod użytkowników Windows (sprawdzane na Windowsie 10 oraz 11). */
-void Download::downloadAudioWindows() {
+void Downloader::downloadAudioWindows() {
 #ifdef _WIN32
     std::string link;
     std::string outputPath;
@@ -177,7 +176,7 @@ void Download::downloadAudioWindows() {
 
 /* Metoda pobiera wyznaczony przez użytkownika Filmik, natywnie wybiera format mp4,
  * z Audio w kodeku m4a/wav, w zależności od dostępnego formatu, metoda stricte pod Windows. */
-void Download::downloadVideoWindows() {
+void Downloader::downloadVideoWindows() {
 #ifdef _WIN32
     std::string link;
     std::string outputPath;

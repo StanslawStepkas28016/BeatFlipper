@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
-#include "../include/Download.h"
+#include "../include/Downloader.h"
 #include "../include/OutputColors.h"
 #include "../include/UtilityTool.h"
 
 int main() {
-    UtilityTool::resolveHomepath();
+    UtilityTool::resolveHomePath();
 #ifdef _WIN32
     UtilityTool::displayWelcomeUI();
     std::string userInput;
@@ -52,9 +52,9 @@ int main() {
         std::getline(std::cin, userInput);
 
         if (userInput == "1") {
-            Download::downloadAudioMacOs();
+            Downloader::downloadAudioMacOs();
         } else if (userInput == "2") {
-            Download::downloadVideoMacOs();
+            Downloader::downloadVideoMacOs();
         } else if (userInput == "3") {
             break;
         } else {
