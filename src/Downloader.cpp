@@ -4,6 +4,7 @@
 #include <regex>
 #include "../include/Downloader.h"
 #include "../include/GlobalVariables.h"
+#include "../include/OutputColors.h"
 
 /* Metoda pobiera wyznaczony przez użytkownika Bit, metoda jak sama nazwa wskazuje
  * zdefiniowana stricte pod użytkowników MacOs (sprawdzane na MacOs Ventura i Monterey). */
@@ -142,7 +143,7 @@ void Downloader::downloadAudioWindows() {
     std::string outputPath;
 
     std::system("cls");
-    std::cout << "Wprowadz link do Beat'u:\n";
+    std::cout << "Wprowadz link do bita:\n";
 
     OutputColors::setTextColor(8);
     std::cout << "> ";
@@ -150,7 +151,7 @@ void Downloader::downloadAudioWindows() {
     std::getline(std::cin, link);
 
     std::cout << "\n";
-    std::cout << "Wprowadz, gdzie ma sie pobrac Beat (sciezka):\n";
+    std::cout << "Wprowadz, gdzie ma sie pobrac bit (sciezka np. C:\\Users\\Adam\\Downloads\\Bity):\n";
 
     OutputColors::setTextColor(8);
     std::cout << "> ";
@@ -162,13 +163,13 @@ void Downloader::downloadAudioWindows() {
                           + "\"" + outputPath + "\\%(title)s.%(ext)s\" " + "\"" + link + "\" > NUL\"";
 
     std::cout << "\n";
-    std::cout << "Pobieram plik...\n";
+    std::cout << "Pobieram plik...\n\n";
 
     std::system(command.c_str());
 
     std::cout << "\n";
     OutputColors::setTextColor(10);
-    std::cout << "Pobrano plik!\nOkno zakmnie sie automatycznie za 3 sekundy :)";
+    std::cout << "Pobrano plik!\nZaraz nastapi przekierowanie do menu glownego :)";
     OutputColors::setTextColor(7);
     sleep(3);
 #endif

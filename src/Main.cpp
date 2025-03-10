@@ -22,10 +22,10 @@ int main() {
         std::getline(std::cin, userInput);
 
         if (userInput == "1") {
-            Download::downloadAudioWindows();
+            Downloader::downloadAudioWindows();
             break;
         } else if (userInput == "2") {
-            Download::downloadVideoWindows();
+            Downloader::downloadVideoWindows();
             break;
         } else {
             std::system("cls");
