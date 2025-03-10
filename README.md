@@ -7,14 +7,15 @@ FFMPEG, FFMPROBE oraz FFPLAY, które pozwalają na konwertowanie formatów pobie
 
 ## Funkcje
 
-- Pobieranie Instrumentali z Youtube'a
-- Konwersja na Formaty (MP3/WAV/WEBM)
-- Cross Platform (MacOs, Windows 10, Windows 11, Linux - Ubuntu, Kali)
+- Pobieranie plików dźwiękowych 
+- Pobieranie plików wideo  
 
 
 ## Instalacja
 
-Pobierz plik Windows.zip lub MacOs.zip z poniższego linku
+Pobierz plik Windows.zip lub MacOs.zip z poniższego linku (znajdują się w nim pliki niezbędne do 
+działania programu tj. folder "Biblioteki" oraz sam program)
+
 https://drive.google.com/drive/folders/1uWIYJ1pFIjjNIT9iuZuzKi_hM9il9phc?usp=share_link
 
 Instalacja na systemie Windows (10,11).
@@ -25,13 +26,12 @@ Instalacja na systemie Windows (10,11).
   3. Umieść folder "Biblioteki" w otwartym folderze. 
 ```
 
-Instalacja na systemie MacOs (Monterey, Ventura).
+Instalacja na systemie MacOs (Monterey, Ventura, Sonoma).
 
 ```
   1. Otwórz Terminal.
-  2. Wpisz komendę - "open ." (znak " pomiń).
-  3. Do okna Findera, które się otworzy przerzuć
-  folder o nazwie "Biblioteki".
+  2. Wpisz komendę - `bash open .`
+  3. W otwartym oknie Findera umieść folder o nazwie "Biblioteki". 
 ```
 
 
@@ -41,7 +41,6 @@ Instalacja na systemie MacOs (Monterey, Ventura).
 
 Poprzez użycie std::system, wywoływane są komendy (do programu yt-dlp) do terminala/basha/cmd (w zależności od systemu), które korzystają z programów/bibliotek w folderze "Biblioteki". 
 
-
 ## Problemy/Fedback
 
 Jeśli masz jakiekolwiek problemy z funkcjonowaniem programu,
@@ -50,8 +49,7 @@ profil na Githubie.
 
 ## Rozwój Programu
 
-Jeśli jesteś Deweloperem i chcesz przyczynić się do rozwoju programu,
-śmiało, skontaktuj się ze mną przez Instagram (@prod.mustang), bądź przez mój profil na Githubie.
+Jeśli chcesz przyczynić się do rozwoju programu, skontaktuj się ze mną przez Instagram (@prod.mustang), bądź przez mój profil na Githubie.
 
 ## Autorzy
 
