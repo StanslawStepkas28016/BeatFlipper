@@ -1,4 +1,0 @@
-Aby pobrać biblioteki, udaj się do Drive'a (niestety maksymalna wielkość plików, 
-które można umieścić w tym Repozytorium to 25 MB).
-
-https://drive.google.com/drive/folders/1uWIYJ1pFIjjNIT9iuZuzKi_hM9il9phc?usp=share_link

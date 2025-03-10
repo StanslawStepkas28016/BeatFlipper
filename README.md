@@ -16,22 +16,19 @@ FFMPEG, FFMPROBE oraz FFPLAY, które pozwalają na konwertowanie formatów pobie
 
 Instalacja na systemie Windows (10,11).
 
-```bash
-  1. Otwórz Explorer'a.
-  2. Przejdź do ścieżki HomePath ()
-  3. Do okna Explorer'a, które się otworzy przerzuć
-  folder o nazwie "Biblioteki".
-
+```
+  1. Otwórz ekplorator plików Windows.
+  2. Przejdź do ścieżki HomePath swojego systemu (np. C:\Users\Adam)
+  3. Umieść folder "Biblioteki" w otwartym folderze. 
 ```
 
 Instalacja na systemie MacOs (Monterey, Ventura).
 
-```bash
+```
   1. Otwórz Terminal.
   2. Wpisz komendę - "open ." (znak " pomiń).
   3. Do okna Findera, które się otworzy przerzuć
   folder o nazwie "Biblioteki".
-
 ```
 
 
