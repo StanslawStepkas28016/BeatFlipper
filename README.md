@@ -14,6 +14,9 @@ FFMPEG, FFMPROBE oraz FFPLAY, które pozwalają na konwertowanie formatów pobie
 
 ## Instalacja
 
+Pobierz plik Windows.zip lub MacOs.zip z poniższego linku
+https://drive.google.com/drive/folders/1uWIYJ1pFIjjNIT9iuZuzKi_hM9il9phc?usp=share_link
+
 Instalacja na systemie Windows (10,11).
 
 ```
