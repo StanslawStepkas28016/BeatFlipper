@@ -172,6 +172,7 @@ void Downloader::downloadAudioWindows() {
     std::cout << "Pobrano plik!\nZaraz nastapi przekierowanie do menu glownego :)";
     OutputColors::setTextColor(7);
     sleep(3);
+    std::system("cls");
 #endif
 }
 
@@ -203,15 +204,15 @@ void Downloader::downloadVideoWindows() {
                           + "\"" + outputPath + "\\%(title)s.%(ext)s\" " + "\"" + link + "\" > NUL\"";
 
     std::cout << "\n";
-    std::cout << "Pobieram plik...\n";
-    std::cout << "Przy dluzszych filmikach moze potrwac to chwilke dluzej!\n";
+    std::cout << "Pobieram plik...\n\n";
 
     std::system(command.c_str());
 
     std::cout << "\n";
     OutputColors::setTextColor(10);
-    std::cout << "Pobrano plik!\nOkno zamknie sie automatycznie za 3 sekundy :)";
+    std::cout << "Pobrano plik!\nZaraz nastapi przekierowanie do menu glownego :)\n";
     OutputColors::setTextColor(7);
     sleep(3);
+    std::system("cls");
 #endif
 }

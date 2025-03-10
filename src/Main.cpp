@@ -14,6 +14,7 @@ int main() {
         std::cout << "Wybierz co chcesz pobierac (wprowadz cyferke):\n";
         std::cout << "1. Audio.\n";
         std::cout << "2. Video.\n";
+        std::cout << "3. Zakoncz.\n";
 
         OutputColors::setTextColor(8);
         std::cout << "> ";
@@ -23,11 +24,13 @@ int main() {
 
         if (userInput == "1") {
             Downloader::downloadAudioWindows();
-            break;
         } else if (userInput == "2") {
             Downloader::downloadVideoWindows();
+        }
+        else if (userInput == "3") {
             break;
-        } else {
+        }
+        else {
             std::system("cls");
             OutputColors::setTextColor(4);
             std::cout << "Wprowadzono niepoprawna cyferke!\n";
